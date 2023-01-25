@@ -1,0 +1,42 @@
+@use "../globals/typography" as g;
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 26px;
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__gender {
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+    font-size: g.$middleTitle;
+  }
+
+  &__gender-item {
+    &:first-of-type {
+      margin-right: 16px;
+    }
+  }
+
+  &__nav-links {
+    display: flex;
+    flex-direction: row;
+    font-size: g.$smallText;
+  }
+
+  &__nav-link {
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 16px;
+    }
+  }
+}
