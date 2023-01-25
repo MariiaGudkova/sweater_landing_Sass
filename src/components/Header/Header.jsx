@@ -1,19 +1,25 @@
 import headerLogo from "../../images/header__logo.svg";
+import buttonArrow from "../../images/header_button_arrow.svg";
+import basketLogo from "../../images/basket_logo.svg";
 
-function Header() {
+function Header(props) {
+  const { isOpen, setIsOpen } = props;
+
+  function onClick() {
+    return setIsOpen(!isOpen);
+  }
+
   return (
     <header className="header blue light-text">
       <img className="header__logo" src={headerLogo} alt="logo" />
       <nav className="header__menu">
-        <ul className="header__gender">
-          <li className="header__gender-item">
-            {" "}
+        <ul className="header__gender-links">
+          <li className="header__gender-link">
             <a className="light-text" href="#">
               Women
             </a>
           </li>
-          <li className="header__gender-item">
-            {" "}
+          <li className="header__gender-link">
             <a className="light-text" href="#">
               Men
             </a>
@@ -41,8 +47,35 @@ function Header() {
             </a>
           </li>
         </ul>
+        <div className="header__buttons">
+          <button className="header__button-dropdown light-text">
+            RU / EN
+            <img
+              className="header__button-arrow"
+              src={buttonArrow}
+              alt="arrow"
+              onClick={onClick}
+            />
+          </button>
+          <ul
+            className={
+              isOpen
+                ? "header__dropdown-content header__dropdown-content_active blue"
+                : "header__dropdown-content"
+            }
+          >
+            <li className="header__dropdown-lang" onClick={onClick}>
+              RU
+            </li>
+            <li className="header__dropdown-lang" onClick={onClick}>
+              EN
+            </li>
+          </ul>
+          <a className="header__basket-link" href="#">
+            <img src={basketLogo} alt="basket logo" />
+          </a>
+        </div>
       </nav>
-      <div className="header__buttons"></div>
     </header>
   );
 }
