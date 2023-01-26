@@ -60,7 +60,7 @@ function Header(props) {
           <ul
             className={
               isOpen
-                ? "header__dropdown-content header__dropdown-content_active blue"
+                ? "header__dropdown-content header__dropdown-content_active light-blue"
                 : "header__dropdown-content"
             }
           >

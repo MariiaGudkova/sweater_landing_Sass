@@ -1,4 +1,5 @@
 @use "../globals/typography" as g;
+@use "../utils/breackpoints" as b;
 
 .header {
   width: 100%;
@@ -7,6 +8,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 30px;
+
+  @include b.breackpoint(large) {
+    padding: 30px 90px;
+  }
 
   &__logo {
     cursor: pointer;
@@ -83,9 +88,10 @@
       @extend .header__dropdown-content;
       display: block;
       position: absolute;
-      top: 70px;
-      right: 30px;
-      width: 100px;
+      top: 30px;
+      right: 40px;
+      width: 86px;
+      text-align: center;
       font-size: g.$smallText;
     }
   }
@@ -100,6 +106,7 @@
       transition: opacity 0.5s ease;
     }
     &:first-of-type {
+      padding-top: 5px;
       padding-bottom: 5px;
       border-bottom: 1px solid hsl(64, 30%, 89%);
     }
