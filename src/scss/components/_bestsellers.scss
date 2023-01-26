@@ -1,0 +1,22 @@
+@use "../globals/typography" as g;
+
+.bestsellers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
+
+  &__title {
+    font-weight: g.$fontWeight;
+    margin: 28px 0 30px 115px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 0 16px;
+    border-bottom: 1.5px solid hsl(0, 20%, 15%);
+  }
+}

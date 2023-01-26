@@ -6,7 +6,7 @@ h3 {
 }
 
 p {
-  margin-top: 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -72,7 +72,7 @@ button {
 }
 
 .light-blue {
-  background-color: hsl(208deg, 22%, 56%);
+  background-color: hsl(208deg, 24%, 56%);
 }
 
 .white {
@@ -165,9 +165,9 @@ button {
   position: absolute;
   top: 30px;
   right: 40px;
-  width: 86px;
+  width: 90px;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
 }
 .header__dropdown-lang {
   cursor: pointer;
@@ -239,4 +239,69 @@ button {
 .history__text {
   font-size: 16px;
   line-height: 1.24;
+}
+
+.bestsellers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.bestsellers__title {
+  font-weight: 400;
+  margin: 28px 0 30px 115px;
+}
+.bestsellers__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 0 16px;
+  border-bottom: 1.5px solid hsl(0deg, 20%, 15%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card__img {
+  margin-bottom: 16px;
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: filter 0.5s ease;
+}
+.card__img:hover {
+  filter: brightness(70%);
+  transition: filter 0.5s ease;
+}
+.card__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 47px;
+}
+.card__material {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 19px;
+  min-height: 80px;
+}
+.card__sizes {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+.card__size, .card__size_notAvailable {
+  margin-right: 6px;
+}
+.card__size:last-of-type, .card__size_notAvailable:last-of-type {
+  margin-right: 0;
+}
+.card__size_notAvailable {
+  opacity: 0.4;
 }/*# sourceMappingURL=style.css.map */

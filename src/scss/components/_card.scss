@@ -1,0 +1,56 @@
+@use "../globals/typography" as g;
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    margin-bottom: 16px;
+    cursor: pointer;
+    filter: brightness(100%);
+    transition: filter 0.5s ease;
+
+    &:hover {
+      filter: brightness(70%);
+      transition: filter 0.5s ease;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: g.$mainText;
+    margin-bottom: 47px;
+  }
+
+  &__material {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: g.$smallText;
+    line-height: 20px;
+    margin-bottom: 19px;
+    min-height: 80px;
+  }
+
+  &__sizes {
+    display: flex;
+    flex-direction: row;
+    font-size: g.$smallText;
+    margin-bottom: 9px;
+  }
+
+  &__size {
+    margin-right: 6px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &_notAvailable {
+      @extend .card__size;
+      opacity: 0.4;
+    }
+  }
+}
