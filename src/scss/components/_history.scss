@@ -1,0 +1,44 @@
+@use "../globals/typography" as g;
+@use "../utils/breackpoints" as b;
+
+.history {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -2px;
+  padding-bottom: 63px;
+  width: 100%;
+
+  @include b.breackpoint(large) {
+    justify-content: space-evenly;
+    padding-top: 50px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 376px;
+    margin: 63px 0 0 115px;
+
+    @include b.breackpoint(large) {
+      margin-left: 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: g.$smallText;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-size: g.$bigTitle;
+    font-weight: g.$fontWeight;
+    margin-bottom: 30px;
+    max-width: 247px;
+  }
+
+  &__text {
+    font-size: g.$mainText;
+    line-height: 1.24;
+  }
+}
