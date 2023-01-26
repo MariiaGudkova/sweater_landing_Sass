@@ -1,0 +1,9 @@
+$breackpoints: (
+  "large": 1440px,
+);
+
+@mixin breackpoint($size) {
+  @media (min-width: map-get($breackpoints, $size)) {
+    @content;
+  }
+}
