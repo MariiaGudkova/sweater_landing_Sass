@@ -1,4 +1,4 @@
-import Card from "../Card/Card";
+import BestSellerCard from "../BestSellerCard/BestSellerCard";
 import { cards } from "../../utils/constants";
 
 function BestSellers() {
@@ -7,7 +7,7 @@ function BestSellers() {
       <h2 className="bestsellers__title">O.A.D. Best Selling knitwear</h2>
       <div className="bestsellers__cards">
         {cards.map((card) => {
-          return <Card card={card} key={card.id} />;
+          return <BestSellerCard card={card} key={card.id} />;
         })}
       </div>
     </div>

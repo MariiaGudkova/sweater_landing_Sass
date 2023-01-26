@@ -1,8 +1,10 @@
-function Card(props) {
+function BestSellerCard(props) {
   const { card } = props;
   return (
     <div className="card">
-      <img className="card__img" src={card.image} alt={card.title} />
+      <a className="card__link" href="#">
+        <img className="card__img" src={card.image} alt={card.title} />
+      </a>
       <div className="card__info">
         <p className="card__title">{card.title}</p>
         <p className="card__price">{card.price}</p>
@@ -34,4 +36,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default BestSellerCard;

@@ -264,9 +264,12 @@ button {
   display: flex;
   flex-direction: column;
 }
+.card__link:hover {
+  opacity: 1;
+}
 .card__img {
+  width: 100%;
   margin-bottom: 16px;
-  cursor: pointer;
   filter: brightness(100%);
   transition: filter 0.5s ease;
 }
@@ -304,4 +307,37 @@ button {
 }
 .card__size_notAvailable {
   opacity: 0.4;
+}
+
+.links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0;
+}
+
+.link-card {
+  position: relative;
+}
+.link-card__link:hover {
+  opacity: 1;
+}
+.link-card__img {
+  width: 100%;
+  max-height: 1000px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(100%);
+  transition: filter 0.5s ease;
+}
+.link-card__img:hover {
+  filter: brightness(70%);
+  transition: filter 0.5s ease;
+}
+.link-card__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
 }/*# sourceMappingURL=style.css.map */

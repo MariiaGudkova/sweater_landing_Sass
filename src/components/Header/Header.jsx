@@ -49,7 +49,7 @@ function Header(props) {
         </ul>
         <div className="header__buttons">
           <button className="header__button-dropdown light-text">
-            RU / EN
+            NO / EN
             <img
               className="header__button-arrow"
               src={buttonArrow}
@@ -65,7 +65,7 @@ function Header(props) {
             }
           >
             <li className="header__dropdown-lang" onClick={onClick}>
-              RU
+              NO
             </li>
             <li className="header__dropdown-lang" onClick={onClick}>
               EN
