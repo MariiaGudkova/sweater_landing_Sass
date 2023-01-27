@@ -1,0 +1,88 @@
+@use "../globals/typography" as g;
+@use "../utils/breackpoints" as b;
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 30px;
+
+  &__logo {
+    align-self: flex-start;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.5s ease;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 60px;
+    justify-items: flex-end;
+  }
+
+  &__gender-item {
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__gender-link {
+    font-size: g.$smallTitle;
+  }
+
+  &__main-item {
+    margin-bottom: 8px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__main-link {
+    font-size: g.$mainText;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.5s ease;
+    }
+  }
+
+  &__add-item {
+    margin-bottom: 8px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__add-link {
+    font-size: g.$smallText;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.5s ease;
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__social-link {
+    &:first-of-type {
+      margin-right: 8px;
+    }
+  }
+
+  &__social-logo {
+    width: 30px;
+    height: 30px;
+  }
+}

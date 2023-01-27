@@ -16,7 +16,7 @@ function MoreInfo() {
           </li>
           <li className="more-info__item">
             <a className="more-info__link white-text" href="#">
-              DEVOID OF NORWAY
+              DEVOLD OF NORWAY
             </a>
           </li>
         </ul>
