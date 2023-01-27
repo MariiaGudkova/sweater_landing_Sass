@@ -1,0 +1,69 @@
+@use "../globals/typography" as g;
+@use "../utils/breackpoints" as b;
+
+.more-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/moreinfo_img.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include b.breackpoint(large) {
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    margin-right: 165px;
+    max-width: 328px;
+
+    @include b.breackpoint(large) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+    }
+  }
+
+  &__title {
+    font-size: g.$middleTitle;
+    font-weight: g.$fontWeight;
+    margin-bottom: 51px;
+  }
+
+  &__text {
+    font-size: g.$smallText;
+    line-height: 17px;
+    margin-bottom: 109px;
+    font-weight: 500;
+  }
+
+  &__links {
+    font-size: g.$smallText;
+    line-height: 17px;
+    font-weight: 500;
+  }
+
+  &__links-title {
+    margin-bottom: 23px;
+  }
+
+  &__item {
+    &:first-of-type {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__link {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.5s ease;
+    }
+  }
+}

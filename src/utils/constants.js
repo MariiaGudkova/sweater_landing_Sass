@@ -1,7 +1,7 @@
-import card1 from '../images/cards/card_1.png';
-import card2 from '../images/cards/card_2.png';
-import card3 from '../images/cards/card_3.png';
-import card4 from '../images/cards/card_4.png';
+import card1 from '../images/bestSellersCards/card_1.png';
+import card2 from '../images/bestSellersCards/card_2.png';
+import card3 from '../images/bestSellersCards/card_3.png';
+import card4 from '../images/bestSellersCards/card_4.png';
 
 import linkCard1 from '../images/linkCards/card_1.png';
 import linkCard2 from '../images/linkCards/card_2.png';
