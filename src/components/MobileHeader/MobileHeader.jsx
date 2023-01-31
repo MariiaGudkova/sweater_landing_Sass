@@ -9,15 +9,32 @@ function MobileHeader(props) {
     setIsBurgerMenuOpen,
     isLanguagesSelectOpen,
     setIsLanguagesSelectOpen,
+    pageLanguage,
+    setPageLanguage,
+    lang,
   } = props;
 
-  const [pageLanguage, setPageLanguage] = React.useState("EN");
+  function closeByEscape(evt) {
+    if (evt.key === "Escape") {
+      close();
+    }
+  }
+
+  function closeByClick(evt) {
+    if (evt.target.className === "overlay_active") {
+      close();
+    }
+  }
 
   function onBurgerClick() {
-    return setIsBurgerMenuOpen(true);
+    document.addEventListener("keydown", closeByEscape);
+    document.addEventListener("click", closeByClick);
+    setIsBurgerMenuOpen(true);
   }
 
   function close() {
+    document.removeEventListener("keydown", closeByEscape);
+    document.removeEventListener("click", closeByClick);
     return setIsBurgerMenuOpen(false);
   }
 
@@ -29,6 +46,12 @@ function MobileHeader(props) {
     setPageLanguage(lang);
     setIsLanguagesSelectOpen(false);
   }
+
+  React.useEffect(() => {
+    return () => {
+      setIsBurgerMenuOpen(false);
+    };
+  }, []);
 
   return (
     <header className="mobile-header blue light-text">
@@ -60,34 +83,34 @@ function MobileHeader(props) {
         <ul className="mobile-header__gender-links">
           <li className="mobile-header__gender-link">
             <a className="light-text" href="#">
-              Women
+              {lang.WOMEN}
             </a>
           </li>
           <li className="mobile-header__gender-link">
             <a className="light-text" href="#">
-              Men
+              {lang.MEN}
             </a>
           </li>
         </ul>
         <ul className="mobile-header__nav-links">
           <li className="mobile-header__nav-link">
             <a className="light-text" href="#">
-              OUR HERITAGE
+              {lang.OUR_HERITAGE}
             </a>
           </li>
           <li className="mobile-header__nav-link">
             <a className="light-text" href="#">
-              CARE
+              {lang.CARE}
             </a>
           </li>
           <li className="mobile-header__nav-link">
             <a className="light-text" href="#">
-              COLLECTIONS
+              {lang.COLLECTIONS}
             </a>
           </li>
           <li className="mobile-header__nav-link">
             <a className="light-text" href="#">
-              RESPONSIBILITY
+              {lang.RESPONSIBILITY}
             </a>
           </li>
         </ul>
@@ -95,22 +118,22 @@ function MobileHeader(props) {
           <button className="mobile-header__button-dropdown light-text">
             <span
               className={
-                pageLanguage === "NO"
-                  ? "mobile-header__button-dropdown-item_select"
-                  : "mobile-header__button-dropdown-item"
-              }
-            >
-              NO
-            </span>
-            {" / "}
-            <span
-              className={
                 pageLanguage === "EN"
                   ? "mobile-header__button-dropdown-item_select"
                   : "mobile-header__button-dropdown-item"
               }
             >
-              EN
+              {lang.EN}
+            </span>
+            {" / "}
+            <span
+              className={
+                pageLanguage === "RU"
+                  ? "mobile-header__button-dropdown-item_select"
+                  : "mobile-header__button-dropdown-item"
+              }
+            >
+              {lang.RU}
             </span>
             <img
               className="mobile-header__button-arrow"
@@ -128,15 +151,15 @@ function MobileHeader(props) {
           >
             <li
               className="mobile-header__dropdown-lang"
-              onClick={() => changeLanguage("NO")}
+              onClick={() => changeLanguage("EN")}
             >
-              NO
+              {lang.EN}
             </li>
             <li
               className="mobile-header__dropdown-lang"
-              onClick={() => changeLanguage("EN")}
+              onClick={() => changeLanguage("RU")}
             >
-              EN
+              {lang.RU}
             </li>
           </ul>
           <a className="mobile-header__basket-link" href="#">
