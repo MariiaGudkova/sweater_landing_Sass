@@ -1,12 +1,19 @@
+import React from "react";
 import headerLogo from "../../images/header__logo.svg";
 import buttonArrow from "../../images/header_button_arrow.svg";
 import basketLogo from "../../images/basket_logo.svg";
 
 function Header(props) {
-  const { isOpen, setIsOpen } = props;
+  const { isLanguagesSelectOpen, setIsLanguagesSelectOpen } = props;
+  const [pageLanguage, setPageLanguage] = React.useState("EN");
 
   function onClick() {
-    return setIsOpen(!isOpen);
+    return setIsLanguagesSelectOpen(!isLanguagesSelectOpen);
+  }
+
+  function changeLanguage(lang) {
+    setPageLanguage(lang);
+    setIsLanguagesSelectOpen(false);
   }
 
   return (
@@ -49,7 +56,25 @@ function Header(props) {
         </ul>
         <div className="header__buttons">
           <button className="header__button-dropdown light-text">
-            NO / EN
+            <span
+              className={
+                pageLanguage === "NO"
+                  ? "header__button-dropdown-item_select"
+                  : "header__button-dropdown-item"
+              }
+            >
+              NO
+            </span>
+            {" / "}
+            <span
+              className={
+                pageLanguage === "EN"
+                  ? "header__button-dropdown-item_select"
+                  : "header__button-dropdown-item"
+              }
+            >
+              EN
+            </span>
             <img
               className="header__button-arrow"
               src={buttonArrow}
@@ -59,15 +84,21 @@ function Header(props) {
           </button>
           <ul
             className={
-              isOpen
+              isLanguagesSelectOpen
                 ? "header__dropdown-content header__dropdown-content_active light-blue"
                 : "header__dropdown-content"
             }
           >
-            <li className="header__dropdown-lang" onClick={onClick}>
+            <li
+              className="header__dropdown-lang"
+              onClick={() => changeLanguage("NO")}
+            >
               NO
             </li>
-            <li className="header__dropdown-lang" onClick={onClick}>
+            <li
+              className="header__dropdown-lang"
+              onClick={() => changeLanguage("EN")}
+            >
               EN
             </li>
           </ul>
