@@ -1,11 +1,21 @@
 $breackpoints-up: (
-  "large": 1440px,
-  "medium": 1170px,
+  "1440": 1440px,
+  "1170": 1170px,
 );
 
 $breackpoints-down: (
-  "large": 1440px,
-  "medium": 1169.99px,
+  "1440": 1440px,
+  "1169": 1169px,
+  "1110": 1110px,
+  "980": 980px,
+  "880": 880px,
+  "769": 769px,
+  "610": 610px,
+  "590": 590px,
+  "470": 470px,
+  "420": 420px,
+  "370": 370px,
+  "350": 350px,
 );
 
 @mixin breackpoint($size) {

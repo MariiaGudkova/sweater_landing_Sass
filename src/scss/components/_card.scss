@@ -1,4 +1,5 @@
 @use "../globals/typography" as g;
+@use "../utils/breackpoints" as b;
 
 .card {
   display: flex;
@@ -28,6 +29,10 @@
     justify-content: space-between;
     font-size: g.$mainText;
     margin-bottom: 47px;
+
+    @include b.breackpoint-down("769") {
+      margin-bottom: 30px;
+    }
   }
 
   &__material {
@@ -38,6 +43,10 @@
     line-height: 20px;
     margin-bottom: 19px;
     min-height: 80px;
+
+    @include b.breackpoint-down("769") {
+      margin-bottom: 13px;
+    }
   }
 
   &__sizes {

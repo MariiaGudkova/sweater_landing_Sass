@@ -29,6 +29,7 @@ function MobileHeader(props) {
   function onBurgerClick() {
     document.addEventListener("keydown", closeByEscape);
     document.addEventListener("click", closeByClick);
+    setIsLanguagesSelectOpen(false);
     setIsBurgerMenuOpen(true);
   }
 

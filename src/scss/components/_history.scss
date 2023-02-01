@@ -9,9 +9,13 @@
   padding-bottom: 63px;
   width: 100%;
 
-  @include b.breackpoint(large) {
+  @include b.breackpoint("1440") {
     justify-content: space-evenly;
     padding-top: 50px;
+  }
+
+  @include b.breackpoint-down("420") {
+    justify-content: center;
   }
 
   &__info {
@@ -20,8 +24,20 @@
     max-width: 376px;
     margin: 63px 0 0 115px;
 
-    @include b.breackpoint(large) {
+    @include b.breackpoint("1440") {
       margin-left: 0;
+    }
+
+    @include b.breackpoint-down("980") {
+      margin-right: 20px;
+    }
+
+    @include b.breackpoint-down("769") {
+      margin: 63px 20px 0 30px;
+    }
+
+    @include b.breackpoint-down("420") {
+      margin: 50px 20px 0 20px;
     }
   }
 
@@ -35,10 +51,46 @@
     font-weight: g.$fontWeight;
     margin-bottom: 30px;
     max-width: 247px;
+
+    @include b.breackpoint-down("880") {
+      font-size: g.$middleTitle;
+    }
+
+    @include b.breackpoint-down("420") {
+      max-width: 100%;
+    }
   }
 
   &__text {
     font-size: g.$mainText;
     line-height: 1.24;
+  }
+
+  &__img {
+    @include b.breackpoint-down("1110") {
+      max-width: 500px;
+      object-fit: cover;
+    }
+
+    @include b.breackpoint-down("880") {
+      max-width: 420px;
+    }
+
+    @include b.breackpoint-down("769") {
+      max-width: 360px;
+    }
+
+    @include b.breackpoint-down("590") {
+      max-width: 250px;
+    }
+
+    @include b.breackpoint-down("470") {
+      max-width: 200px;
+      object-position: center;
+    }
+
+    @include b.breackpoint-down("470") {
+      display: none;
+    }
   }
 }

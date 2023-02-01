@@ -1,4 +1,5 @@
 @use "../globals/typography" as g;
+@use "../utils/breackpoints" as b;
 
 .link-card {
   position: relative;
@@ -26,5 +27,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: g.$middleTitle;
+
+    @include b.breackpoint-down("420") {
+      font-size: g.$smallTitle;
+      text-align: center;
+      max-width: 120px;
+    }
   }
 }

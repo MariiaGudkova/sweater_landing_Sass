@@ -7,6 +7,10 @@
   justify-content: space-between;
   margin: 30px 30px;
 
+  @include b.breackpoint-down("350") {
+    margin: 20px 20px;
+  }
+
   &__logo {
     align-self: flex-start;
     cursor: pointer;
@@ -16,6 +20,22 @@
       opacity: 0.7;
       transition: opacity 0.5s ease;
     }
+
+    @include b.breackpoint-down("980") {
+      max-width: 130px;
+    }
+
+    @include b.breackpoint-down("590") {
+      margin-right: 20px;
+    }
+
+    @include b.breackpoint-down("420") {
+      max-width: 90px;
+    }
+
+    @include b.breackpoint-down("370") {
+      display: none;
+    }
   }
 
   &__menu {
@@ -24,6 +44,21 @@
     grid-template-columns: repeat(3, minmax(100px, 1fr));
     gap: 60px;
     justify-items: flex-end;
+
+    @include b.breackpoint-down("880") {
+      gap: 0;
+    }
+
+    @include b.breackpoint-down("590") {
+      grid-template-columns: repeat(2, minmax(70px, 1fr));
+      row-gap: 40px;
+      column-gap: 20px;
+    }
+
+    @include b.breackpoint-down("370") {
+      grid-template-columns: repeat(3, minmax(70px, 1fr));
+      gap: 10px;
+    }
   }
 
   &__gender-item {
@@ -34,6 +69,9 @@
 
   &__gender-link {
     font-size: g.$smallTitle;
+    @include b.breackpoint-down("769") {
+      font-size: g.$mainText;
+    }
   }
 
   &__main-item {
@@ -44,12 +82,18 @@
   }
 
   &__main-link {
-    font-size: g.$mainText;
+    font-size: g.$smallText;
     opacity: 1;
     transition: opacity 0.5s ease;
     &:hover {
       opacity: 0.7;
       transition: opacity 0.5s ease;
+    }
+  }
+
+  &__add-links {
+    @include b.breackpoint-down("350") {
+      align-self: center;
     }
   }
 
@@ -79,10 +123,23 @@
     &:first-of-type {
       margin-right: 8px;
     }
+
+    @include b.breackpoint-down("590") {
+      margin-right: 20px;
+    }
+
+    @include b.breackpoint-down("370") {
+      margin-right: 0;
+    }
   }
 
   &__social-logo {
     width: 30px;
     height: 30px;
+
+    @include b.breackpoint-down("350") {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
