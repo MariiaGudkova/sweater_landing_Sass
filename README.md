@@ -13,3 +13,5 @@
 - Реализована смена языка лендинга
 
 ## Ссылка на Github Pages:
+
+<a href="https://mariiagudkova.github.io/sweater_landing_Sass/">Ссылка</a>
