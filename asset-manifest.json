@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/MariiaGudkova/sweater_landing_Sass/static/css/main.fa927048.css",
-    "main.js": "/MariiaGudkova/sweater_landing_Sass/static/js/main.f8796a43.js",
-    "static/js/787.28cb0dcd.chunk.js": "/MariiaGudkova/sweater_landing_Sass/static/js/787.28cb0dcd.chunk.js",
-    "static/media/card_1.png": "/MariiaGudkova/sweater_landing_Sass/static/media/card_1.40886435c5c339685c43.png",
-    "static/media/moreinfo_img.png": "/MariiaGudkova/sweater_landing_Sass/static/media/moreinfo_img.3f243a52b6ef0e65b775.png",
-    "static/media/card_2.png": "/MariiaGudkova/sweater_landing_Sass/static/media/card_2.6a72a004412d79f5b1a3.png",
-    "static/media/history__img.png": "/MariiaGudkova/sweater_landing_Sass/static/media/history__img.78ee41bb336755a5123b.png",
-    "static/media/card_3.png": "/MariiaGudkova/sweater_landing_Sass/static/media/card_3.a88d5af443bcbf1100d2.png",
-    "static/media/card_4.png": "/MariiaGudkova/sweater_landing_Sass/static/media/card_4.3305760c37eb9bcb80d9.png",
-    "static/media/instagram.png": "/MariiaGudkova/sweater_landing_Sass/static/media/instagram.bc603acad2a8cb3bd098.png",
-    "static/media/header__logo.svg": "/MariiaGudkova/sweater_landing_Sass/static/media/header__logo.3a8407672933a8771028a6890b72159c.svg",
-    "static/media/footer__logo.svg": "/MariiaGudkova/sweater_landing_Sass/static/media/footer__logo.1e6a70892cc0b683bf876cb1c95b14b8.svg",
-    "static/media/basket_logo.svg": "/MariiaGudkova/sweater_landing_Sass/static/media/basket_logo.7bd080f186a419c96ecbbcde3ae496fd.svg",
-    "index.html": "/MariiaGudkova/sweater_landing_Sass/index.html",
-    "static/media/header_button_arrow.svg": "/MariiaGudkova/sweater_landing_Sass/static/media/header_button_arrow.a2a437d56530ecfd05eb9974ff13de7c.svg",
-    "main.fa927048.css.map": "/MariiaGudkova/sweater_landing_Sass/static/css/main.fa927048.css.map",
-    "main.f8796a43.js.map": "/MariiaGudkova/sweater_landing_Sass/static/js/main.f8796a43.js.map",
-    "787.28cb0dcd.chunk.js.map": "/MariiaGudkova/sweater_landing_Sass/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/sweater_landing_Sass/static/css/main.5cf3cc17.css",
+    "main.js": "/sweater_landing_Sass/static/js/main.1aa74e85.js",
+    "static/js/787.28cb0dcd.chunk.js": "/sweater_landing_Sass/static/js/787.28cb0dcd.chunk.js",
+    "static/media/card_1.png": "/sweater_landing_Sass/static/media/card_1.40886435c5c339685c43.png",
+    "static/media/moreinfo_img.png": "/sweater_landing_Sass/static/media/moreinfo_img.3f243a52b6ef0e65b775.png",
+    "static/media/card_2.png": "/sweater_landing_Sass/static/media/card_2.6a72a004412d79f5b1a3.png",
+    "static/media/history__img.png": "/sweater_landing_Sass/static/media/history__img.78ee41bb336755a5123b.png",
+    "static/media/card_3.png": "/sweater_landing_Sass/static/media/card_3.a88d5af443bcbf1100d2.png",
+    "static/media/card_4.png": "/sweater_landing_Sass/static/media/card_4.3305760c37eb9bcb80d9.png",
+    "static/media/instagram.png": "/sweater_landing_Sass/static/media/instagram.bc603acad2a8cb3bd098.png",
+    "static/media/header__logo.svg": "/sweater_landing_Sass/static/media/header__logo.3a8407672933a8771028a6890b72159c.svg",
+    "static/media/footer__logo.svg": "/sweater_landing_Sass/static/media/footer__logo.1e6a70892cc0b683bf876cb1c95b14b8.svg",
+    "static/media/basket_logo.svg": "/sweater_landing_Sass/static/media/basket_logo.7bd080f186a419c96ecbbcde3ae496fd.svg",
+    "index.html": "/sweater_landing_Sass/index.html",
+    "static/media/header_button_arrow.svg": "/sweater_landing_Sass/static/media/header_button_arrow.a2a437d56530ecfd05eb9974ff13de7c.svg",
+    "main.5cf3cc17.css.map": "/sweater_landing_Sass/static/css/main.5cf3cc17.css.map",
+    "main.1aa74e85.js.map": "/sweater_landing_Sass/static/js/main.1aa74e85.js.map",
+    "787.28cb0dcd.chunk.js.map": "/sweater_landing_Sass/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa927048.css",
-    "static/js/main.f8796a43.js"
+    "static/css/main.5cf3cc17.css",
+    "static/js/main.1aa74e85.js"
   ]
 }
