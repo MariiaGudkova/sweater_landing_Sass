@@ -1,22 +1,20 @@
-function MoreInfo() {
+function MoreInfo(props) {
+  const { lang } = props;
   return (
     <div className="more-info white-text">
       <div className="more-info__content">
-        <h2 className="more-info__title">A Legacy of Wool Since 1853</h2>
-        <p className="more-info__text">
-          USING OUR KNOWLEDGE, ROOTED IN OUR DEVOID HERITAGE, WE CONTINUE THE
-          TRADITION OF MASTERING WOOL.
-        </p>
+        <h2 className="more-info__title">{lang.MORE_INFO_TITLE}</h2>
+        <p className="more-info__text">{lang.MORE_INFO_TEXT}</p>
         <ul className="more-info__links">
-          <p className="more-info__links-title">READ MORE:</p>
+          <p className="more-info__links-title">.{lang.READ_MORE}</p>
           <li className="more-info__item">
             <a className="more-info__link white-text" href="#">
-              OUR HERITAGE
+              {lang.OUR_HERITAGE}
             </a>
           </li>
           <li className="more-info__item">
             <a className="more-info__link white-text" href="#">
-              DEVOLD OF NORWAY
+              {lang.DEVOLD_OF_NORWAY}
             </a>
           </li>
         </ul>

@@ -4,8 +4,13 @@ import buttonArrow from "../../images/header_button_arrow.svg";
 import basketLogo from "../../images/basket_logo.svg";
 
 function Header(props) {
-  const { isLanguagesSelectOpen, setIsLanguagesSelectOpen } = props;
-  const [pageLanguage, setPageLanguage] = React.useState("EN");
+  const {
+    isLanguagesSelectOpen,
+    setIsLanguagesSelectOpen,
+    pageLanguage,
+    setPageLanguage,
+    lang,
+  } = props;
 
   function onClick() {
     return setIsLanguagesSelectOpen(!isLanguagesSelectOpen);
@@ -23,34 +28,34 @@ function Header(props) {
         <ul className="header__gender-links">
           <li className="header__gender-link">
             <a className="light-text" href="#">
-              Women
+              {lang.WOMEN}
             </a>
           </li>
           <li className="header__gender-link">
             <a className="light-text" href="#">
-              Men
+              {lang.MEN}
             </a>
           </li>
         </ul>
         <ul className="header__nav-links">
           <li className="header__nav-link">
             <a className="light-text" href="#">
-              OUR HERITAGE
+              {lang.OUR_HERITAGE}
             </a>
           </li>
           <li className="header__nav-link">
             <a className="light-text" href="#">
-              CARE
+              {lang.CARE}
             </a>
           </li>
           <li className="header__nav-link">
             <a className="light-text" href="#">
-              COLLECTIONS
+              {lang.COLLECTIONS}
             </a>
           </li>
           <li className="header__nav-link">
             <a className="light-text" href="#">
-              RESPONSIBILITY
+              {lang.RESPONSIBILITY}
             </a>
           </li>
         </ul>
@@ -58,22 +63,22 @@ function Header(props) {
           <button className="header__button-dropdown light-text">
             <span
               className={
-                pageLanguage === "NO"
-                  ? "header__button-dropdown-item_select"
-                  : "header__button-dropdown-item"
-              }
-            >
-              NO
-            </span>
-            {" / "}
-            <span
-              className={
                 pageLanguage === "EN"
                   ? "header__button-dropdown-item_select"
                   : "header__button-dropdown-item"
               }
             >
-              EN
+              {lang.EN}
+            </span>
+            {" / "}
+            <span
+              className={
+                pageLanguage === "RU"
+                  ? "header__button-dropdown-item_select"
+                  : "header__button-dropdown-item"
+              }
+            >
+              {lang.RU}
             </span>
             <img
               className="header__button-arrow"
@@ -91,15 +96,15 @@ function Header(props) {
           >
             <li
               className="header__dropdown-lang"
-              onClick={() => changeLanguage("NO")}
+              onClick={() => changeLanguage("EN")}
             >
-              NO
+              {lang.EN}
             </li>
             <li
               className="header__dropdown-lang"
-              onClick={() => changeLanguage("EN")}
+              onClick={() => changeLanguage("RU")}
             >
-              EN
+              {lang.RU}
             </li>
           </ul>
           <a className="header__basket-link" href="#">

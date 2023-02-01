@@ -1,12 +1,12 @@
 import BestSellerCard from "../BestSellerCard/BestSellerCard";
-import { cards } from "../../utils/constants";
 
-function BestSellers() {
+function BestSellers(props) {
+  const { lang } = props;
   return (
     <div className="bestsellers white dark-text">
-      <h2 className="bestsellers__title">O.A.D. Best Selling knitwear</h2>
+      <h2 className="bestsellers__title">{lang.BEST_SELLERS}</h2>
       <div className="bestsellers__cards">
-        {cards.map((card) => {
+        {lang.cards.map((card) => {
           return <BestSellerCard card={card} key={card.id} />;
         })}
       </div>

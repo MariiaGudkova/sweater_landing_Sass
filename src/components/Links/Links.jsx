@@ -1,10 +1,10 @@
 import LinkCard from "../LinkCard/LinkCard";
-import { linksCard } from "../../utils/constants";
 
-function Links() {
+function Links(props) {
+  const { lang } = props;
   return (
     <div className="links">
-      {linksCard.map((card, index) => {
+      {lang.linksCards.map((card, index) => {
         return <LinkCard card={card} key={index} />;
       })}
     </div>

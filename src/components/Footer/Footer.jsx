@@ -2,7 +2,8 @@ import footerLogo from "../../images/footer__logo.svg";
 import instagramLogo from "../../images/instagram.png";
 import facebookLogo from "../../images/facebook.png";
 
-function Footer() {
+function Footer(props) {
+  const { lang } = props;
   return (
     <footer className="footer white dark-text">
       <img className="footer__logo" src={footerLogo} alt="logo" />
@@ -10,64 +11,64 @@ function Footer() {
         <ul className="footer__main-links">
           <li className="footer__gender-item">
             <a className="footer__gender-link dark-text" href="#">
-              Men
+              {lang.MEN}
             </a>
           </li>
           <li className="footer__gender-item">
             <a className="footer__gender-link dark-text" href="#">
-              Women
+              {lang.WOMEN}
             </a>
           </li>
           <li className="footer__main-item">
             <a className="footer__main-link dark-text" href="#">
-              Our Heritage
+              {lang.OUR_HERITAGE}
             </a>
           </li>
           <li className="footer__main-item">
             <a className="footer__main-link dark-text" href="#">
-              Care
+              {lang.CARE}
             </a>
           </li>
           <li className="footer__main-item">
             <a className="footer__main-link dark-text" href="#">
-              Collections
+              {lang.COLLECTIONS}
             </a>
           </li>
           <li className="footer__main-item">
             <a className="footer__main-link dark-text" href="#">
-              Responsibility
+              {lang.RESPONSIBILITY}
             </a>
           </li>
         </ul>
         <ul className="footer__add-links">
           <li className="footer__add-item">
             <a className="footer__add-link dark-text" href="#">
-              Stores and Showroom
+              {lang.STORES_AND_SHOWROOM}
             </a>
           </li>
           <li className="footer__add-item">
             <a className="footer__add-link dark-text" href="#">
-              Shipping & Delivery
+              {lang.DELIVERY}
             </a>
           </li>
           <li className="footer__add-item">
             <a className="footer__add-link dark-text" href="#">
-              Returns & Exhanges
+              {lang.RETURNS}
             </a>
           </li>
           <li className="footer__add-item">
             <a className="footer__add-link dark-text" href="#">
-              Terms & Conditions
+              {lang.TERMS}
             </a>
           </li>
           <li className="footer__add-item">
             <a className="footer__add-link dark-text" href="#">
-              Privacy Policy
+              {lang.PRIVACY}
             </a>
           </li>
           <li className="footer__add-item">
             <a className="footer__add-link dark-text" href="#">
-              Customer service
+              {lang.CUSTOMER_SERVICE}
             </a>
           </li>
         </ul>

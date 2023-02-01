@@ -1,20 +1,13 @@
 import historyImg from "../../images/history__img.png";
 
-function History() {
+function History(props) {
+  const { lang } = props;
   return (
     <div className="history blue light-text">
       <div className="history__info">
-        <p className="history__subtitle">FW22 collection</p>
-        <h1 className="history__title">An Endless Pursuit of Nature</h1>
-        <p className="history__text">
-          In 1853 Ole Andreas Devold embarked on his journey, and since then our
-          wool has been formed in the roughest conditions. Today, we build on
-          our tradition of mastering wool. Relying on our dedication to
-          craftmanship, we develop the finest quality from the most robust
-          material. Crafted to withstand storms and to comfort on late summer
-          nights. With profound care for nature, we create knitwear that lasts,
-          that can be passed on – a legacy for times to come.
-        </p>
+        <p className="history__subtitle">{lang.COLLECTION_NUMBER}</p>
+        <h1 className="history__title">{lang.BREND_LOSUNG}</h1>
+        <p className="history__text">{lang.BREND_HISTORY}</p>
       </div>
       <img className="history__img" src={historyImg} alt="girl" />
     </div>

@@ -4,14 +4,15 @@ import Links from "../Links/Links";
 import Promo from "../Promo/Promo";
 import MoreInfo from "../MoreInfo/MoreInfo";
 
-function Main() {
+function Main(props) {
+  const { lang } = props;
   return (
     <main className="main-container">
-      <History />
-      <BestSellers />
-      <Links />
-      <Promo />
-      <MoreInfo />
+      <History lang={lang} />
+      <BestSellers lang={lang} />
+      <Links lang={lang} />
+      <Promo lang={lang} />
+      <MoreInfo lang={lang} />
     </main>
   );
 }
